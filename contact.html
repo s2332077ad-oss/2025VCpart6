@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>お問い合わせ - イタリアン CIT</title>
+<style>
+body {
+	margin: 0;
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+	background-color: #fff8f8;
+	color: #800000;
+}
+
+ul.ddmenu {
+	margin: 0;
+	padding: 0;
+	background-color: #cc0000;
+	text-align: center;
+}
+ul.ddmenu li {
+	width: 150px;
+	display: inline-block;
+	list-style-type: none;
+	position: relative;
+}
+ul.ddmenu a {
+	background-color: #cc0000;
+	color: white;
+	line-height: 40px;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	display: block;
+}
+ul.ddmenu a:hover {
+	background-color: #ffdddd;
+	color:#dd0000;
+}
+ul.ddmenu ul {
+	display: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	left: 0;
+	top: 40px;
+}
+ul.ddmenu li:hover ul {
+	display: block;
+}
+
+.container {
+	width: 700px;
+	margin: 30px auto;
+	background-color: #ffc0cb;
+	padding: 20px;
+	border-radius: 8px;
+	box-sizing: border-box;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+label {
+	display: block;
+	margin: 10px 0 5px;
+}
+
+input[type="text"], input[type="email"], textarea {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #800000;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+textarea {
+	height: 150px;
+	resize: none;
+}
+
+input[type="submit"] {
+	background-color: #cc0000;
+	color: white;
+	font-weight: bold;
+	border: none;
+	padding: 10px 20px;
+	margin-top: 15px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+	background-color: #ffdddd;
+	color: #dd0000;
+}
+
+#back {
+	margin: 20px;
+}
+#back a {
+	color: #800000;
+	text-decoration: none;
+	font-weight: bold;
+}
+#back a:hover {
+	text-decoration: underline;
+}
+</style>
+</head>
+
+<body>
+<ul class="ddmenu">
+   <li><a href="index.html">HOME</a></li>
+   <li><a href="#">メニュー</a>
+      <ul>
+         <li><a href="itiran.html">一覧</a></li>
+         <li><a href="osusume.html">おすすめ</a></li>
+      </ul>
+   </li>
+   <li><a href="#">店舗情報</a>
+      <ul>
+         <li><a href="about.html">会社概要</a></li>
+         <li><a href="access.html">アクセス</a></li>
+      </ul>
+   </li>
+   <li><a href="contact.html">お問い合わせ</a></li>
+</ul>
+
+<div class="container">
+	<h1>お問い合わせ</h1>
+	<p>ご質問やご予約については下記のフォームからお問い合わせください。</p>
+	
+	<!-- この書き方すれば実際には送らずに確認だけできる -->
+	<form onsubmit="alert(
+  'お名前: ' + document.getElementById('name').value +
+  '\nメール: ' + document.getElementById('email').value +
+  '\n件名: ' + document.getElementById('subject').value +
+  '\n内容: ' + document.getElementById('message').value
+); return false;">
+    <label for="name">お名前</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">メールアドレス</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="subject">件名</label>
+    <input type="text" id="subject" name="subject" required>
+
+    <label for="message">お問い合わせ内容</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <input type="submit" value="送信">
+</form>
+
+</div>
+
+<div id="back">
+	<a href="index.html">ホームへ戻る</a>
+</div>
+</body>
+</html>

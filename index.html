@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>イタリアン CIT</title>
+<style>
+body {
+	margin: 0;
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+	background-color: #000;
+	color: #800000;
+}
+
+#bigbox {
+	width: 100%;
+	background-image: url(kusa.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+}
+
+ul.ddmenu {
+	margin: 0;
+	padding: 0;
+	background-color: #cc0000;
+	text-align: center;
+	position: relative;
+	z-index: 1000;
+}
+ul.ddmenu li {
+	width: 150px;
+	display: inline-block;
+	list-style-type: none;
+	position: relative;
+}
+ul.ddmenu a {
+	background-color: #cc0000;
+	color: white;
+	line-height: 40px;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	display: block;
+}
+ul.ddmenu a:hover {
+	background-color: #ffdddd;
+	color: #dd0000;
+}
+ul.ddmenu ul {
+	display: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	left: 0;
+	top: 40px;
+}
+ul.ddmenu li:hover ul {
+	display: block;
+}
+
+#hero {
+	text-align: center;
+	padding: 80px 20px;
+	background-color: rgba(0, 0, 0, 0.6);
+	color: #fff;
+}
+#hero h1 {
+	font-size: 3em;
+	margin-bottom: 20px;
+}
+#hero p {
+	font-size: 1.2em;
+}
+
+#wrap {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: rgba(255, 255, 255, 0.9);
+	padding: 20px;
+}
+
+.product {
+	width: 50%;
+	background-color: #ffc0cb;
+	color: #800000;
+	box-sizing: border-box;
+	padding: 15px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.product img {
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	border-radius: 8px;
+}
+.product h1 {
+	font-size: 1.4em;
+	margin: 10px 0;
+}
+
+#info {
+	background-color: rgba(0,0,0,0.7);
+	color: #fff;
+	text-align: center;
+	padding: 30px 20px;
+}
+#info h2 {
+	font-size: 2em;
+	margin-bottom: 15px;
+}
+#info p {
+	font-size: 1em;
+	line-height: 1.6em;
+	max-width: 700px;
+	margin: 0 auto 15px auto;
+}
+.hero-inner {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px; 
+}
+
+#logo {
+	width: 100px; 
+	height: auto;
+}
+
+header {
+    text-align: left; 
+    padding: 20px; 
+}
+	
+
+@media screen and (max-width: 600px) {
+	.product {
+		width: 100%;
+	}
+	ul.ddmenu li {
+		width: 100%;
+		display: block;
+	}
+	#hero h1 {
+		font-size: 2em;
+	}
+}
+</style>
+</head>
+
+<body>
+<div id="bigbox">
+	<ul class="ddmenu">
+	   <li><a href="index.html">HOME</a></li>
+	   <li><a href="#">メニュー</a>
+		  <ul>
+			 <li><a href="itiran.html">一覧</a></li>
+			 <li><a href="osusume.html">おすすめ</a></li>
+		  </ul>
+	   </li>
+	   <li><a href="#">店舗情報</a>
+		  <ul>
+			 <li><a href="about.html">会社概要</a></li>
+			 <li><a href="access.html">アクセス</a></li>
+		  </ul>
+	   </li>
+	   <li><a href="contact.html">お問い合わせ</a></li>
+	</ul>
+
+	<div id="hero">
+		<div class="hero-inner">
+			<img src="logo.jpg" alt="イタリアン CIT ロゴ" id="logo">
+			<h1>イタリアン CIT</h1>
+		</div>
+		<p>気取らない贅沢を、日常に。<br>ワインとチーズ、国産牛肉の香りが広がるレストラン</p>
+	</div>
+
+	<div id="wrap">
+		<div class="product">
+			<h1>トマトとモッツァレラチーズ</h1>
+			<img src="p1.jpg" alt="トマトとモッツァレラチーズ">
+		</div>
+
+		<div class="product">
+			<h1>パテドカンパーニュ</h1>
+			<img src="p2.jpg" alt="パテドカンパーニュ">
+		</div>
+
+		<div class="product">
+			<h1>フレッシュなサラダ</h1>
+			<img src="p3.jpg" alt="フレッシュなサラダ">
+		</div>
+
+		<div class="product">
+			<h1>ワイン</h1>
+			<img src="p4.jpg" alt="ワイン">
+		</div>
+	</div>
+
+	<div id="info">
+		<h2>店舗情報</h2>
+		<p>住所：〒999-999 奈良氏之市都田沼123</p>
+		<p>電話番号：000-1234-5678</p>
+		<p>都田沼駅より徒歩2分。様々なシーンにご利用下さい。</p>
+	</div>
+</div>
+</body>
+</html>

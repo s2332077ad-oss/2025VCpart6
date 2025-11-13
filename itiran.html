@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>商品一覧</title>
+<style>
+body {
+	margin: 0;
+	font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+	background-color: #000;
+	color: #800000;
+}
+
+#bigbox {
+	width: 100%;
+	background-image: url(kusa.jpg); 
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+}
+ul.ddmenu {
+	margin: 0;
+	padding: 0;
+	background-color: #cc0000;
+	text-align: center;
+	position: relative;
+	z-index: 1000;
+}
+ul.ddmenu li {
+	width: 150px;
+	display: inline-block;
+	list-style-type: none;
+	position: relative;
+}
+ul.ddmenu a {
+	background-color: #cc0000;
+	color: white;
+	line-height: 40px;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	display: block;
+}
+ul.ddmenu a:hover {
+	background-color: #ffdddd;
+	color: #dd0000;
+}
+ul.ddmenu ul {
+	display: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	left: 0;
+	top: 40px;
+}
+ul.ddmenu li:hover ul {
+	display: block;
+}
+#shop {
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.85);
+	color: #800000;
+	padding: 30px 0;
+}
+
+
+#wrap {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+.product {
+	width: 50%;
+	background-color: #ffc0cb;
+	color: #800000;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+
+.product h1 {
+	font-size: 1em;
+	margin: 0.5em;
+}
+
+
+.product img {
+	width: 100%;
+	aspect-ratio: 4 / 3; 
+	object-fit: cover;    
+	border-radius: 5px;
+}
+
+#back {
+	position: fixed;
+	bottom: 15px;
+	left: 15px;
+	background-color: rgba(153, 153, 153, 0.8);
+	padding: 6px 10px;
+	border-radius: 6px;
+	font-size: 1em;
+	z-index: 1000;
+}
+#back a {
+	color: #800000;
+	text-decoration: none;
+}
+#back:hover {
+	background-color: rgba(200, 200, 200, 1);
+}
+
+</style>
+</head>
+
+<body>
+<div id="bigbox">
+	<ul class="ddmenu">
+	   <li><a href="index.html">HOME</a></li>
+	   <li><a href="#">メニュー</a>
+		  <ul>
+			 <li><a href="itiran.html">一覧</a></li>
+			 <li><a href="osusume.html">おすすめ</a></li>
+		  </ul>
+	   </li>
+	   <li><a href="#">店舗情報</a>
+		  <ul>
+			 <li><a href="about.html">会社概要</a></li>
+			 <li><a href="access.html">アクセス</a></li>
+		  </ul>
+	   </li>
+	   <li><a href="contact.html">お問い合わせ</a></li>
+	</ul>
+
+	<div id="shop">
+		<h1>商品一覧</h1>
+	</div>
+
+	<div id="wrap">
+		<div class="product">
+			<h1>トマトとモッツァレラチーズ</h1>
+			<img src="p1.jpg" alt="トマトとモッツァレラチーズ">
+		</div>
+
+		<div class="product">
+			<h1>パテドカンパーニュ</h1>
+			<img src="p2.jpg" alt="パテドカンパーニュ">
+		</div>
+
+		<div class="product">
+			<h1>フレッシュなサラダ</h1>
+			<img src="p3.jpg" alt="フレッシュなサラダ">
+		</div>
+
+		<div class="product">
+			<h1>ワイン</h1>
+			<img src="p4.jpg" alt="ワイン">
+		</div>
+
+		<div class="product">
+			<h1>クラフトビール</h1>
+			<img src="p5.jpg" alt="クラフトビール">
+		</div>
+
+		<div class="product">
+			<h1>国産牛ステーキ</h1>
+			<img src="p6.jpg" alt="国産牛ステーキ">
+		</div>
+
+		<div class="product">
+			<h1>国産牛ローストビーフオニオンソース</h1>
+			<img src="p7.jpg" alt="国産牛ローストビーフオニオンソース">
+		</div>
+
+		<div class="product">
+			<h1>豚カシラ肉の柔らかグリル</h1>
+			<img src="p8.jpg" alt="豚カシラ肉の柔らかグリル">
+		</div>
+	</div>
+</div>
+
+<div id="back">
+	<a href="index.html">ホームへ戻る</a>
+</div>
+
+</body>
+</html>
